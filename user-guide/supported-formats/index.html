@@ -1,0 +1,1766 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Automatic Croissant JSON-LD metadata generation for ML datasets">
+      
+      
+        <meta name="author" content="MIT Laboratory for Computational Physiology">
+      
+      
+        <link rel="canonical" href="https://lcp.mit.edu/croissant-baker/user-guide/supported-formats/">
+      
+      
+        <link rel="prev" href="../../getting-started/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/baker_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Supported Formats - croissant-baker</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supported-formats" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="croissant-baker" class="md-header__button md-logo" aria-label="croissant-baker" data-md-component="logo">
+      
+  <img src="../../assets/baker_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            croissant-baker
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Supported Formats
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MIT-LCP/croissant-baker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MIT-LCP/croissant-baker
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="croissant-baker" class="md-nav__button md-logo" aria-label="croissant-baker" data-md-component="logo">
+      
+  <img src="../../assets/baker_logo.png" alt="logo">
+
+    </a>
+    croissant-baker
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MIT-LCP/croissant-baker" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MIT-LCP/croissant-baker
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supported Formats
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supported Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duplicate-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-and-tsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV and TSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fhir-ndjson-json-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FHIR (.ndjson, .json Bundle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-and-jsonl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON and JSONL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parquet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wfdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WFDB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ome-tiff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OME-TIFF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DICOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIfTI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geo-soft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEO SOFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GEO SOFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupported-and-incomplete-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unsupported and incomplete inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdf5-h5-h5ad-hdf5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDF5 (.h5, .h5ad, .hdf5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HDF5 (.h5, .h5ad, .hdf5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-becomes-a-record-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What becomes a record set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-find-a-field-in-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to find a field in the file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-and-where-they-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types, and where they come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-attach-to-the-axis-that-indexes-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays attach to the axis that indexes them
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-not-described" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is not described
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-value-from-inside-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No value from inside the file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-wrapper-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a wrapper costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hidden files and directories
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAI Metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#duplicate-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csv-and-tsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV and TSV
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fhir-ndjson-json-bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FHIR (.ndjson, .json Bundle)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-and-jsonl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON and JSONL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parquet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parquet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wfdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WFDB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ome-tiff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OME-TIFF
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DICOM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nifti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIfTI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geo-soft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEO SOFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GEO SOFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unsupported-and-incomplete-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unsupported and incomplete inputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdf5-h5-h5ad-hdf5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HDF5 (.h5, .h5ad, .hdf5)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HDF5 (.h5, .h5ad, .hdf5)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-becomes-a-record-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What becomes a record set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-find-a-field-in-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to find a field in the file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-and-where-they-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types, and where they come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrays-attach-to-the-axis-that-indexes-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays attach to the axis that indexes them
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-not-described" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is not described
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-value-from-inside-the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No value from inside the file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-wrapper-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a wrapper costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hidden files and directories
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="supported-formats">Supported Formats</h1>
+<p>croissant-baker detects file types automatically. Handlers are checked in the order listed below — the first match wins.</p>
+<p>Nothing is skipped in silence, and nothing is reported one line per file by default. The closing coverage summary counts every file the document does not carry, under the reason it was passed over. The summary is a fixed size — a header plus at most one line per reason — so a directory with one undescribed file and one with ten thousand print the same shape. The full list is under <code>--verbose</code>, or in the machine-readable <code>--report</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Scanned 8 file(s): 4 described, 1 linked, 1 referenced, 2 not described.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  no handler: 1
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  archive, not opened: 1
+</span></code></pre></div>
+<p>A file reaches the document three ways, and the header names each one that
+happened. <code>described</code> means a handler read the file and built its record set.
+<code>linked</code> means the file is another described file in a different form — a
+<code>.csv.gz</code> beside its <code>.csv</code> — so its bytes are described and its structure is
+its twin's. <code>referenced</code> means another file's handler put it there: a WFDB
+header is read together with its <code>.dat</code> and <code>.atr</code>, and each gets a FileObject
+though nothing claims a <code>.dat</code> on its own. Only <code>not described</code> counts files the
+document does not carry, and the reason lines account for exactly those.</p>
+<p><code>--report FILE</code> writes one JSON object per run. <code>outcome</code> and <code>reason</code> come from
+fixed vocabularies, so a tool can branch on them without parsing English:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;total&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;described&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;linked&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;referenced&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;undescribed&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&quot;by_reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;no_handler&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;archive&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notes.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;outcome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unclaimed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;no_handler&quot;</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">     </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;no handler for this file type&quot;</span><span class="p">},</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample.csv.gz&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;outcome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;linked&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;duplicate_by_name&quot;</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">     </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;same logical name as sample.csv; linked by naming convention, content not verified&quot;</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">     </span><span class="nt">&quot;duplicate_of&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sample.csv&quot;</span><span class="p">},</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.dat&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;outcome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;referenced&quot;</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">     </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;described as part of 100.hea&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;part_of&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.hea&quot;</span><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>described</code>, <code>linked</code>, <code>referenced</code> and <code>undescribed</code> sum to <code>total</code>, so a tool
+can check coverage without reading the file list. <code>by_reason</code> accounts for the
+<code>undescribed</code> alone.</p>
+<p><code>outcome</code> is one of <code>described</code>, <code>linked</code>, <code>referenced</code>, <code>unclaimed</code>, <code>failed</code>,
+or <code>would_process</code> (<code>--dry-run</code> only). <code>reason</code> is one of <code>no_handler</code>,
+<code>archive</code>, <code>unsupported_input</code>, <code>claim_failed</code>, <code>extract_failed</code>,
+<code>build_failed</code>, <code>partition_schema_conflict</code>, <code>duplicate_by_name</code>, or
+<code>probable_duplicate</code>, and is absent on <code>described</code> and <code>referenced</code>.</p>
+<h2 id="file-types">File types</h2>
+<!-- Auto-generated by docs/generate.py — do not edit manually -->
+
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Extensions</th>
+<th>Compression</th>
+<th>What's extracted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSV</td>
+<td><code>.csv</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Column names, inferred types, optional row count</td>
+</tr>
+<tr>
+<td>TSV</td>
+<td><code>.tsv</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Column names, inferred types, optional row count</td>
+</tr>
+<tr>
+<td>FHIR</td>
+<td><code>.ndjson</code>, <code>.json</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Resource types, field names and types per resource</td>
+</tr>
+<tr>
+<td>JSON / JSONL</td>
+<td><code>.json</code>, <code>.jsonl</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Schema inferred from a sample of records</td>
+</tr>
+<tr>
+<td>WFDB</td>
+<td><code>.hea</code></td>
+<td>—</td>
+<td>Signal names, sampling frequency, duration, number of signals</td>
+</tr>
+<tr>
+<td>Parquet</td>
+<td><code>.parquet</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Arrow schema, column names and types, row count</td>
+</tr>
+<tr>
+<td>Images</td>
+<td><code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.gif</code>, <code>.bmp</code>, <code>.webp</code>, <code>.ico</code>, <code>.tiff</code>, <code>.tif</code>, <code>.btf</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Dimensions, color mode, encoding format; OME-XML header fields</td>
+</tr>
+<tr>
+<td>DICOM</td>
+<td><code>.dcm</code>, <code>.dicom</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Image geometry, modality, pixel encoding, acquisition parameters</td>
+</tr>
+<tr>
+<td>NIfTI</td>
+<td><code>.nii</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Spatial dimensions, voxel spacing, data type, TR for fMRI volumes</td>
+</tr>
+<tr>
+<td>GEO SOFT</td>
+<td><code>.soft</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Entity attribute names, sample characteristic keys, data table columns</td>
+</tr>
+<tr>
+<td>HDF5</td>
+<td><code>.h5</code>, <code>.h5ad</code>, <code>.hdf5</code></td>
+<td><code>.gz</code>, <code>.bz2</code>, <code>.xz</code></td>
+<td>Dataset paths, dtypes and shapes; AnnData and 10x table columns where the layout is recognised</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compression">Compression</h2>
+<p><code>.gz</code>, <code>.bz2</code> and <code>.xz</code> are transport, not format. They are resolved before any handler is consulted, so every format in the table above is described the same way whether or not it arrived wrapped: <code>cells.parquet.gz</code> produces the record set that <code>cells.parquet</code> produces.</p>
+<p>What the wrapper changes is the distribution entry, which addresses the bytes on disk. <code>encodingFormat</code> carries both media types, and <code>contentUrl</code>, <code>contentSize</code> and <code>sha256</code> are of the file as stored:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;@type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cr:FileObject&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cells.parquet.gz&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;contentUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cells.parquet.gz&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;encodingFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;application/vnd.apache.parquet&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;application/gzip&quot;</span><span class="p">]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Record set identifiers are derived from the logical file — <code>cells.parquet</code> — so a compressed file and its plain twin describe one table rather than two. Descriptions name the file as stored (<code>Records from cells.parquet.gz</code>), because a description has to name something you can find on disk. FileSet <code>includes</code> are resolved against the files actually present, so a compressed file is covered by the FileSet describing it.</p>
+<p>WFDB is the exception. A WFDB record is a <code>.hea</code> header read together with its sibling <code>.dat</code> and <code>.atr</code> files, so no single stream carries it; a compressed <code>.hea</code> is reported with that as its reason rather than described.</p>
+<p><code>.zip</code>, <code>.tar</code> and <code>.tgz</code> hold several members. They are reported as archives and not opened.</p>
+<p>Registering another compression is a library call and needs no handler change:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">zstandard</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">croissant_baker</span><span class="w"> </span><span class="kn">import</span> <span class="n">compression</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">compression</span><span class="o">.</span><span class="n">register_compression</span><span class="p">(</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">compression</span><span class="o">.</span><span class="n">Compression</span><span class="p">(</span><span class="s2">&quot;zstd&quot;</span><span class="p">,</span> <span class="s2">&quot;.zst&quot;</span><span class="p">,</span> <span class="s2">&quot;application/zstd&quot;</span><span class="p">,</span> <span class="n">zstandard</span><span class="o">.</span><span class="n">open</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="duplicate-files">Duplicate files</h2>
+<p>Two files in one directory can describe the same data, which would otherwise put two record sets under one identifier and abort the bake. One is described and the others link to it with <code>sameAs</code>, keeping their own distribution entries — their bytes, sizes and checksums are their own.</p>
+<table>
+<thead>
+<tr>
+<th>Shape</th>
+<th>How it is decided</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample.csv</code> and <code>sample.csv.gz</code></td>
+<td>Linked on the naming convention. Contents are not compared, and the reason says so</td>
+</tr>
+<tr>
+<td><code>sample.csv.gz</code> and <code>sample.csv.xz</code></td>
+<td>Linked only if the first 64 KiB decompress identically</td>
+</tr>
+<tr>
+<td><code>sample.csv</code> and <code>sample.tsv</code></td>
+<td>Two plain files of different size are rejected outright; otherwise the same 64 KiB comparison. If they differ, both are described under distinct identifiers (<code>sample_csv</code>, <code>sample_tsv</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>The file that keeps its structure is chosen deterministically: uncompressed first, then the order compressions were registered in, then the path.</p>
+<h2 id="csv-and-tsv">CSV and TSV</h2>
+<p>CSV and TSV files are read with PyArrow's streaming reader — memory is constant regardless of file size. Type inference runs in two passes: an initial sweep, then per-column promotion when the first pass hits a type conflict.</p>
+<p>Row counts are omitted by default for speed. Pass <code>--count-csv-rows</code> to do a full scan for exact counts (slow on large datasets).</p>
+<h2 id="fhir-ndjson-json-bundle">FHIR (<code>.ndjson</code>, <code>.json</code> Bundle)</h2>
+<p>Two FHIR serialization formats are supported:</p>
+<ul>
+<li><strong>NDJSON bulk export</strong> (<code>.ndjson</code>): one resource per line, all of the same <code>resourceType</code>. Produced by FHIR Bulk Data servers.</li>
+<li><strong>JSON Bundle</strong> (<code>.json</code>): a FHIR Bundle whose <code>entry[]</code> may contain mixed resource types.</li>
+</ul>
+<p>Field names and types are inferred from a sample of resources. <code>OperationOutcome</code> resources (error markers) are skipped.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>FHIR <code>.json</code> files are detected by content — the handler looks for <code>"resourceType": "&lt;UpperCase…"</code> before accepting. Plain JSON files that happen to use <code>.json</code> are handled by the JSON handler instead.</p>
+</div>
+<h2 id="json-and-jsonl">JSON and JSONL</h2>
+<ul>
+<li><strong>JSON</strong> (<code>.json</code>): an array of objects (one object per record) or a single object (treated as one record).</li>
+<li><strong>JSONL</strong> (<code>.jsonl</code>): newline-delimited JSON, one object per line.</li>
+</ul>
+<p>Schema is inferred from a sample of records. FHIR <code>.json</code> files are excluded — they go to the FHIR handler.</p>
+<h2 id="parquet">Parquet</h2>
+<p>Schema is read from Parquet metadata only — the file data is never loaded.</p>
+<p>Spark and Arrow write one table as a directory of <code>part-*.parquet</code>, while a vendor export directory holds several unrelated tables. Directory membership cannot tell those apart, so two files are shards of one logical table — one <code>cr:FileSet</code> and one <code>cr:RecordSet</code> — only when both hold:</p>
+<table>
+<thead>
+<tr>
+<th>Evidence</th>
+<th>What counts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A shard-shaped name</td>
+<td>The names match once digit runs are masked, and at least one of those runs is a name component of its own: the whole stem (<code>0.parquet</code>) or introduced by <code>-</code>, <code>_</code> or <code>.</code> (<code>part-00000.parquet</code>). Digits fused to letters are part of a word, so <code>assay1.parquet</code> and <code>assay2.parquet</code> stay two tables</td>
+</tr>
+<tr>
+<td>An identical Arrow schema</td>
+<td>Compared as Arrow types, not as Croissant types, which collapse timestamp units, nullability, decimal precision and nested structure</td>
+</tr>
+</tbody>
+</table>
+<p>Anything else is described on its own, as CSV and JSON files are. Files at the dataset root never pair.</p>
+<p>Where files agree on the name but not the schema, that is drift inside one table: the majority schema is described and the rest are reported with reason <code>partition_schema_conflict</code> rather than folded in. The <code>cr:FileSet</code> then lists its shards individually — a directory-wide glob would re-admit exactly the files that were kept out.</p>
+<h2 id="wfdb">WFDB</h2>
+<p>WFDB (WaveForm DataBase) is the standard physiological signal format on PhysioNet. The handler reads the <code>.hea</code> header file and records signal channel names, sampling frequency, number of samples, and duration. Associated <code>.dat</code> binary files are listed as related files.</p>
+<p>Because a record spans several files located by path, this is the one handler that needs a real file on disk. A compressed <code>.hea</code> is reported rather than described.</p>
+<h2 id="images">Images</h2>
+<p>Standard images (<code>.png</code>, <code>.jpg</code>, <code>.gif</code>, <code>.bmp</code>, <code>.webp</code>, <code>.ico</code>) are read with Pillow. TIFF and BigTIFF files (<code>.tif</code>, <code>.tiff</code>, <code>.btf</code>) are read with <code>tifffile</code>, which supports scientific TIFF layouts such as multiband rasters and reads the UTF-8 OME metadata used by microscopy writers. Both TIFF variants use <code>image/tiff</code>.</p>
+<p>Ordinary images belong to the <code>image-files</code> FileSet and <code>images</code> RecordSet. Their descriptions summarize dimensions, band counts and formats. Include patterns cover both root-level files (<code>*.tif</code>, for example) and nested files (<code>**/*.tif</code>), including readers that require a directory for <code>**/</code>. Pixel arrays are not decoded during metadata extraction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Wrapped TIFFs require additional decompression because TIFF readers seek within the file. A backward seek on a compressed stream can restart decompression from the beginning, so reading a <code>.tif.gz</code>, <code>.tif.bz2</code> or <code>.tif.xz</code> can decompress the pixel payload even though no pixel array is decoded. Uncompressed TIFFs can seek directly to their headers.</p>
+</div>
+<h3 id="ome-tiff">OME-TIFF</h3>
+<p>An OME-TIFF carries OME-XML in its ImageDescription tag. The handler checks the content identified by <code>tifffile</code> and requires a versioned OME namespace; the filename's <code>.ome.</code> infix does not determine the format. Files with a readable OME header have their own collection:</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cr:FileSet</code> <code>ome-image-files</code></td>
+<td>the OME files, listed individually</td>
+</tr>
+<tr>
+<td><code>cr:RecordSet</code> <code>ome_images</code></td>
+<td>one row per OME file, with the fields below</td>
+</tr>
+</tbody>
+</table>
+<p>The header fields are <code>ome_version</code>, <code>ome_image_count</code>, <code>size_c</code>, <code>size_z</code>, <code>size_t</code>, <code>dimension_order</code>, <code>pixel_type</code>, <code>physical_size_x</code>, <code>physical_size_y</code>, <code>physical_size_x_unit</code>, <code>physical_size_y_unit</code>, and the array field <code>channel_names</code>. Fields with no observed values are omitted. Invalid dimension counts and physical sizes are omitted independently; physical sizes must be finite and positive.</p>
+<p><strong>Physical measurements retain their original unit metadata.</strong> X and Y have separate unit fields. An absent unit remains <code>None</code> in the parsed header, including for older OME schemas; schema defaults are not applied. Explicit unit strings are preserved and measurements are not converted. Batch ranges are grouped by unit, so <code>0.001 mm</code> and <code>0.2–0.4 µm</code> remain separate summaries. Measurements without a unit are reported separately as <code>unit unspecified</code>. A unit field is omitted when no file in the batch declares a nonempty unit for that axis.</p>
+<p><strong>The manifest separates OME files from ordinary images.</strong> The ordinary-image FileSet retains extension globs and excludes the OME paths using <code>cr:excludes</code>. This keeps its size proportional to the number of OME exceptions rather than the number of ordinary TIFF tiles. The generator resolves both includes and excludes to stored paths, including compression wrappers and linked duplicates. Collection counts and summaries describe this partition.</p>
+<div class="admonition note">
+<p class="admonition-title">Reader support for exclusions</p>
+<p><code>mlcroissant</code> 1.1.0 serializes and validates <code>cr:excludes</code>, but its record reader does not apply those exclusions (<a href="https://github.com/mlcommons/croissant/issues/772">upstream issue #772</a>). In a mixed dataset, <code>records("images")</code> can therefore return OME files as well as ordinary images, exceeding the count stated in the description. The same OME files also belong to <code>ome-image-files</code>. Consumers must honor includes minus excludes to obtain the intended partition. A regression test reads actual records to track this limitation; successful metadata validation alone does not establish correct record reading.</p>
+</div>
+<p><strong>Rows describe files.</strong> One OME document may declare several <code>&lt;Image&gt;</code> elements, and an image may span several TIFF files. The handler does not group these files or resolve <code>TiffData</code> mappings. The Pixels fields describe the first <code>&lt;Image&gt;</code> in each file's XML document, which need not correspond to all pixels stored in that particular file. <code>ome_image_count</code> counts the document's Image elements. TIFF <code>SamplesPerPixel</code> supplies <code>num_bands</code>; it can be 1 for an OME image whose three channels occupy separate TIFF pages.</p>
+<p><strong>Header fields are descriptive.</strong> Their descriptions contain observed ranges or sets, and no <code>Field.value</code> is emitted. Only <code>image</code> has <code>extract: {fileProperty: content}</code>. Header fields retain their FileSet source without an extraction instruction, because reading the file content does not select an OME header attribute. <code>mlcroissant</code> 1.1.0 cannot extract these fields, so reading the complete <code>ome_images</code> RecordSet with <code>records("ome_images")</code> fails even when the metadata validates. Channel labels come from <code>Channel/@Name</code>; the list omits unnamed channels and is not a positional channel mapping. <code>Image/@Name</code>, <code>Creator</code>, and file UUIDs are not copied into field descriptions.</p>
+<p>For descriptions identified as OME-XML, the parser refuses DTD/entity declarations, malformed XML and descriptions larger than 8 MiB. Declaration-like text inside comments, processing instructions or CDATA is allowed. Such text does not declare a DTD or expand entities. Refused files remain in the ordinary <code>images</code> collection with their TIFF properties. The refusal count and reasons appear in that RecordSet's description, and a warning naming the file is available to applications that configure logging. The size limit bounds XML parsing; <code>tifffile</code> may already have decoded the TIFF description tag before the check.</p>
+<p>A <code>BinaryOnly</code> document is a placeholder pointing to a companion metadata file. It remains in <code>ome_images</code>, names the companion in its description, and contributes no header measurements or image count. The companion is not opened.</p>
+<p>Not read: <code>Plane</code>, <code>Objective</code>, <code>TimeIncrement</code>, plate and well metadata, pyramid levels, and vendor TIFF extensions such as <code>.svs</code>, <code>.ndpi</code>, <code>.scn</code>, and <code>.qptiff</code>.</p>
+<h2 id="dicom">DICOM</h2>
+<p>DICOM (<code>.dcm</code>, <code>.dicom</code>) is the standard format for medical imaging (CT, MRI, PET, etc.). The handler uses <code>pydicom</code> with <code>stop_before_pixels=True</code> — only the file header is read, so large pixel arrays are never loaded into memory.</p>
+<p>Extracted metadata: image dimensions (rows, columns), number of frames, bits allocated per pixel, photometric interpretation, pixel spacing, slice thickness, modality, study/series description, manufacturer, and SOP class UID.</p>
+<p>Files with no extension are also accepted if they carry the DICOM magic bytes (<code>DICM</code> at byte offset 128), which is common in PACS exports.</p>
+<p>All DICOM files in a dataset are grouped into one <code>cr:FileSet</code> with a summary <code>cr:RecordSet</code> covering modality counts and dimension ranges.</p>
+<h2 id="nifti">NIfTI</h2>
+<p>NIfTI (<code>.nii</code>) is the standard format for neuroimaging data (structural MRI, fMRI, CT). The handler uses <code>nibabel</code> and reads the header only — the voxel data array is never loaded.</p>
+<p>Extracted metadata: spatial dimensions (x, y, z), number of timepoints for 4D volumes, voxel spacing in mm, stored data type, NIfTI version (1 or 2), and repetition time (TR) for fMRI data.</p>
+<p>All NIfTI files in a dataset are grouped into one <code>cr:FileSet</code> with a summary <code>cr:RecordSet</code>. The <code>tr_seconds</code> field is only added when at least one 4D volume is present.</p>
+<h2 id="geo-soft">GEO SOFT</h2>
+<p>SOFT is a metadata and data export format of the NCBI Gene Expression Omnibus.
+The handler reads <code>.soft</code> family exports and curated DataSet exports such as
+<code>GDS10.soft.gz</code>. Compression is handled by the shared input layer.</p>
+<p>The following record sets describe each file:</p>
+<table>
+<thead>
+<tr>
+<th>Record set suffix</th>
+<th>One row per</th>
+<th>Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_series</code>, <code>_samples</code>, <code>_platforms</code>, <code>_datasets</code>, <code>_subsets</code></td>
+<td>distinct entity of that kind</td>
+<td>declared attribute names, with the entity prefix removed</td>
+</tr>
+<tr>
+<td><code>_sample_characteristics</code></td>
+<td>sample</td>
+<td>sample accession and submitter-defined characteristic keys</td>
+</tr>
+<tr>
+<td><code>_series_table</code>, <code>_sample_table</code>, <code>_platform_table</code>, <code>_dataset_table</code>, etc.</td>
+<td>table row</td>
+<td>declared table columns</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>^DATABASE</code> block is shared GEO boilerplate and is not described. An entity
+kind with no attributes produces no attribute record set. Repeated
+<code>^DATASET</code> declarations for the same accession, separated by <code>^SUBSET</code> blocks,
+count as one dataset. Unsupported entity kinds cause extraction to fail with a
+reason; their metadata is not silently omitted.</p>
+<p>Sample characteristics have a separate record set because their keys are
+submitter-defined. This also keeps a <code>title:</code> characteristic distinct from the
+standard <code>!Sample_title</code> attribute. Characteristics split on the <strong>first colon</strong>,
+with or without whitespace: <code>tissue:liver</code> and <code>tissue: liver</code> both name <code>tissue</code>.
+An empty value still names a key. Lines without a nonempty key and colon are
+counted and represented by fallback fields such as <code>characteristics_ch1</code>.
+Channel 1 and channel-less keys keep their bare names; channels 2 and above
+always use <code>ch2_</code>, <code>ch3_</code>, etc. An unrelated sample cannot rename channel 1's
+fields. Name collisions receive <code>__2</code>, <code>__3</code>, etc., preserving each field.</p>
+<p>The characteristics record set also includes a scalar text <strong><code>geo_accession</code></strong>
+field. It describes the accession of the enclosing <code>^SAMPLE = ACCESSION</code>
+declaration, also commonly recorded in <code>!Sample_geo_accession</code>. A consumer can
+therefore associate that sample with donor keys such as <code>dbgap_subject_id</code>
+(GSE327347) or <code>patient id</code> (GSE335275). This works even when the redundant
+<code>!Sample_geo_accession</code> attribute is absent. If a submitter uses <code>geo_accession</code>
+as a characteristic key, that key is preserved and the added sample identifier
+uses the next available <code>geo_accession__N</code> name; its description identifies its
+source. Donor values and accession values are not copied into the manifest.</p>
+<p>Tables group by entity kind, optional table title, and exact column signature.
+Named series tables, including GSE2034's patient clinical parameters, are
+included. Differently titled tables remain separate even with identical
+columns. Titles and the deposit's <code>#COLUMN</code> descriptions are retained as schema
+metadata. Row counts come from <code>!*_data_row_count</code> declarations; absent or
+invalid counts are reported as unknown. Counts describe the declarations, not
+an independent count of the table body.</p>
+<h3 id="schema-metadata">Schema metadata</h3>
+<p><strong>No data values are emitted.</strong> Attribute and characteristic fields are
+<code>sc:Text</code>, including numeric-looking donor identifiers. Table columns are typed
+using PyArrow and the shared Croissant type mapping. The parser samples up to
+500 rows and 1 MiB per table signature, then discards the sample after typing.
+Empty trailing cells beyond the header width are ignored; duplicate column
+names retain separate positions, types and field identifiers. Type inference
+uses sampled rows, so later rows may contain types absent from that sample.
+Memory grows with entity metadata and distinct table signatures, not the full
+table bodies.</p>
+<p>Fields carry <code>source: {fileObject: …}</code> and <strong>no <code>extract</code></strong>. Croissant 1.1's
+extraction grammar cannot address SOFT entity attributes, and <code>mlcroissant</code>
+does not read SOFT data. These record sets describe the schema; consumers
+reading sample–donor values must parse the source SOFT file within each
+<code>^SAMPLE</code> block. The sample accession field supplies the schema needed for
+that association, without inventing a donor relationship from field names.</p>
+<p>Identifiers derive from the logical filename and dataset-relative path.
+Compression does not change them. For example, <code>GSE1_family.soft.gz</code> produces
+<code>GSE1_family_series</code> and <code>GSE1_family_sample_characteristics</code>. Cross-format
+identifier collisions follow the shared generator rules. <code>encodingFormat</code> is
+<code>text/x-geo-soft</code>, with the compression media type added by the input layer.</p>
+<h3 id="unsupported-and-incomplete-inputs">Unsupported and incomplete inputs</h3>
+<p><code>GSE*_series_matrix.txt</code> uses a different grammar and is not supported by this
+handler. Neither are <code>GSM*.txt</code> or <code>GPL*.annot</code>. Renaming a series matrix to
+<code>.soft</code> does not make it a valid SOFT entity export.</p>
+<p>Files without valid <code>^ENTITY = ACCESSION</code> declarations, unknown entity kinds,
+and mismatched or nested table markers fail extraction with a reason. A table
+still open at end of file or undecodable UTF-8 produces a partial-parse warning
+on every emitted record set. A complete attribute line at end of file is valid:
+attribute blocks have no closing marker. A leading UTF-8 byte order mark is
+accepted.</p>
+<h2 id="hdf5-h5-h5ad-hdf5">HDF5 (<code>.h5</code>, <code>.h5ad</code>, <code>.hdf5</code>)</h2>
+<p>HDF5 is the default container for scientific array data, and the handler reads <code>h5py</code>. <strong>Nothing but structure is read</strong> — dataset paths, dtypes, shapes, and the named attributes a recognised layout defines — so describing a 5 GB file costs what describing a 5 MB one with the same structure costs. Attributes are asked for by name and never as a set, because an attribute holds a value: a Keras <code>model_config</code> or a MATLAB header can be megabytes.</p>
+<p>A file is claimed on the HDF5 signature, which does not have to sit at offset 0: HDF5 permits a user block before the superblock, and MATLAB v7.3 puts a text header in a 512-byte one. The first 8 KiB are searched, at offsets 0 and 512·2ⁿ. A legal file behind a larger user block is reported as having no handler.</p>
+<h3 id="what-becomes-a-record-set">What becomes a record set</h3>
+<p>Every file gets one of two views, never both.</p>
+<table>
+<thead>
+<tr>
+<th>Layout</th>
+<th>Recognised by</th>
+<th>Record sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AnnData (<code>.h5ad</code>)</td>
+<td>root <code>encoding-type: anndata</code>, or an <code>obs</code> and a <code>var</code> with no root <code>encoding-type</code> at all</td>
+<td><code>&lt;stem&gt;_obs</code>, <code>&lt;stem&gt;_var</code></td>
+</tr>
+<tr>
+<td>10x feature-barcode matrix</td>
+<td>a <code>matrix</code> group holding a <code>features</code> group and an <code>indptr</code> that declares a width</td>
+<td><code>&lt;stem&gt;_features</code>, <code>&lt;stem&gt;_barcodes</code></td>
+</tr>
+<tr>
+<td>10x, Cell Ranger 2</td>
+<td>any group holding <code>genes</code>, <code>gene_names</code>, <code>barcodes</code>, <code>data</code> and an <code>indptr</code> that declares a width, under no root <code>filetype</code> or <code>filetype: matrix</code></td>
+<td><code>&lt;stem&gt;_genes</code>, <code>&lt;stem&gt;_barcodes</code>, one pair per genome</td>
+</tr>
+<tr>
+<td>anything else</td>
+<td>—</td>
+<td><code>&lt;stem&gt;</code>, one field per leaf dataset</td>
+</tr>
+</tbody>
+</table>
+<p>Nothing is refused. A Keras model, a NetCDF4 file, a MATLAB v7.3 session, an NWB recording and a BigDataViewer volume all fall to the generic view and are described by their datasets — and so does anything that only partly matches a layout: a <code>matrix</code> group missing its <code>features</code>, either 10x shape whose <code>indptr</code> says nothing about how many barcodes there are, or a legacy shape under a <code>filetype</code> naming some other format. A partial match is described for what it holds rather than claimed as a layout, since a field standing in for an absent array would name something that is not there.</p>
+<p><strong>A barnyard run gets one table pair per genome.</strong> Cell Ranger 2 wrote one group per reference genome, and a human–mouse mixing experiment has two. Both are wholly present, so both are described, and the record set identifiers carry the genome only when there is more than one: <code>&lt;stem&gt;_hg19_genes</code>, <code>&lt;stem&gt;_mm10_genes</code>. scanpy and DropletUtils refuse such a file outright and Seurat returns one matrix per genome; the two that refuse do so because their readers return exactly one matrix, which a manifest is not obliged to. Cell Ranger 3 and later express multiple genomes as a <code>genome</code> column instead, so this only arises for files written before 2018.</p>
+<h3 id="how-to-find-a-field-in-the-file">How to find a field in the file</h3>
+<p><strong>Every field's description states its HDF5 path</strong>, so nothing has to be inferred from a naming convention:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Column &#39;cell_type&#39; at /obs/cell_type in integrated.h5ad
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Array /obsm/X_pca, indexed by the obs axis, in integrated.h5ad
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Column &#39;genes&#39; at /GRCh38/genes in filtered_gene_bc_matrices_h5.h5
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>HDF5 dataset /model_weights/dense/kernel:0 in model.h5
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Member &#39;age&#39; of the record array /obs in legacy.h5ad
+</span></code></pre></div>
+<p>A column name is not enough on its own, which is why the path is spelled out. <code>genes</code> on a Cell Ranger 2 file lives under a group named for the reference genome, and the record-set identifier is derived from the file name, so nothing else in the document would record <code>GRCh38</code>. An array is a second case: <code>X</code> is indexed by the observation axis but stored at the root, not under <code>/obs</code>. Each table's record set also names the group its columns are in (<code>columns at /matrix/features</code>).</p>
+<p>In the generic view the field's <code>name</code> is itself the path. In a recognised layout the <code>name</code> is the column, as it is for a CSV.</p>
+<p><strong>No field carries an <code>extract</code>.</strong> mlcroissant validates one and cannot execute it: its reader dispatches on <code>encodingFormat</code> over CSV, TSV, JSON, Parquet, text, image, audio, video, DICOM and archive types, and has no HDF5 reader at any media type. A field claiming a readable column would be a promise nobody can keep, and the validator would not catch it. The record sets are descriptive, as this tool's Parquet, JSONL and DICOM record sets already are.</p>
+<h3 id="types-and-where-they-come-from">Types, and where they come from</h3>
+<p>For a recognised layout the AnnData <code>encoding-type</code> decides, not the dtype of the object carrying it. A <code>categorical</code> is typed from its <code>categories</code> and never from its <code>codes</code> — the codes are <code>int8</code> below 127 categories and <code>int32</code> at 40 000, so their width is the encoding rather than the type. A <code>nullable-integer</code> is typed from its <code>values</code> and not its <code>mask</code>.</p>
+<p>Older files are read too, because that is what the archives hold. Three vintages wrote a categorical with no encoding of its own, and all three are typed from their labels rather than from their codes:</p>
+<table>
+<thead>
+<tr>
+<th>Vintage</th>
+<th>Where the labels are</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current</td>
+<td><code>&lt;column&gt;/categories</code>, under <code>encoding-type: categorical</code></td>
+</tr>
+<tr>
+<td>0.7.0 – 0.7.8</td>
+<td><code>&lt;frame&gt;/__categories/&lt;column&gt;</code>, beside int8 codes</td>
+</tr>
+<tr>
+<td>pre-0.7</td>
+<td><code>uns/&lt;column&gt;_categories</code>, beside int8 codes</td>
+</tr>
+</tbody>
+</table>
+<p>The 0.7 codes also carry a <code>categories</code> attribute holding an object reference. The reference is not what is followed: it names something rather than holding a value, and this reader never resolves one. The sibling's name is what is matched, and anndata's writer composes that exact path. <code>__categories</code> itself is never described as a column — anndata reserves the name.</p>
+<p>Two more pre-0.7 shapes: <code>obs</code> as a compound-dtype dataset gives its members as columns, and a sparse <code>X</code> written as a group under <code>h5sparse_format</code> / <code>h5sparse_shape</code> is one array field, not the three CSR arrays underneath it.</p>
+<p>A plain string column arrives in either of two shapes, and which one depends on the pandas version that wrote the file rather than on the anndata version: a <code>string-array</code> dataset under pandas 2, a <code>nullable-string-array</code> group under pandas 3, where <code>StringDtype</code> became the default. Both read as text.</p>
+<p>Elsewhere the dtype maps directly, with three cases worth naming. A fixed-length string reports <code>sc:Text</code>, which loses the byte width — every string in a Cell Ranger file is one of these. An object or region reference also reports <code>sc:Text</code>, because Croissant has nothing better, but its description says it is a reference — <code>dtype.kind</code> alone cannot tell one from a variable-length string, and calling it text without saying so would invite a reader to expect labels where there are only pointers. A dataset with a <strong>null dataspace</strong>, which declares no dimensions at all and holds no values, is described as a scalar; that it holds nothing rather than one value is a stated loss.</p>
+<h3 id="arrays-attach-to-the-axis-that-indexes-them">Arrays attach to the axis that indexes them</h3>
+<p><code>X</code> is <em>n_obs</em> × <em>n_var</em>, so on <code>&lt;stem&gt;_obs</code> it is one field of <em>n_var</em> values per row; <code>layers/*</code> and <code>obsm/*</code> join it, and <code>varm/*</code> go to <code>&lt;stem&gt;_var</code>. A 10x matrix is features × barcodes, so it attaches to <code>&lt;stem&gt;_features</code> with the barcode count as its shape. The generic view has no declared axes, so each dataset carries its full shape.</p>
+<h3 id="what-is-not-described">What is not described</h3>
+<p><code>uns</code>, <code>obsp</code>, <code>varp</code> and <code>raw</code> are named in the record-set description and not described: the first is arbitrary, the middle two are graphs over one axis rather than per-row features, and <code>raw</code> holds a second copy of <code>X</code> and <code>var</code>. Every recognised layout names its other top-level entries the same way, so nothing in a file goes unmentioned by both views.</p>
+<p>The generic view describes at most 300 leaf datasets. When it runs out of room it says the cap was reached and that at least one further dataset is not described — not how many, because counting them means walking the whole file, which is the cost the cap exists to avoid. A file holding exactly 300 claims no omission.</p>
+<p>An <strong>external link is never followed</strong>, including a valid one. It can name any HDF5 file on the machine, so following it would describe structure the dataset does not contain and record a path outside its root. The count of links not followed is in the description; the targets are not.</p>
+<h3 id="no-value-from-inside-the-file">No value from inside the file</h3>
+<p>Column names, dataset paths, dtypes, shapes and row counts only. A categorical's labels in particular do not appear: HDF5 guarantees nothing about what they describe, so nothing here can tell an assay vocabulary from a clinical one. Barcodes, feature ids, cell ids and library ids are record-level identifiers and never appear.</p>
+<h3 id="what-a-wrapper-costs">What a wrapper costs</h3>
+<p><code>.h5.gz</code> is described identically to <code>.h5</code>, but not as cheaply. h5py seeks backwards through the file, and a non-seekable codec pays for that by decompressing and discarding everything it skips.</p>
+<p>Measured on a 120 MB <code>.h5ad</code> holding incompressible data, reading its structure took 2 ms uncompressed, 0.7 s gzipped, 6 s xz-wrapped and 7 s bz2-wrapped. That cost tracks the file's size rather than its structure — uncompressed does not — so a 5 GB <code>.h5ad.gz</code> is of the order of half a minute, and the same file bz2-wrapped is several minutes. Uncompressed is worth it for this format, and gzip is worth it over the other two.</p>
+<h2 id="hidden-files-and-directories">Hidden files and directories</h2>
+<p>Files inside hidden directories (any path component starting with <code>.</code>) are always skipped, and do not appear in the coverage report. Use <code>--include</code> and <code>--exclude</code> glob patterns to further control which files are processed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://accessibility.mit.edu/">Accessibility</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/MIT-LCP/croissant-baker" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://pypi.org/project/croissant-baker/" target="_blank" rel="noopener" title="PyPI" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 444.7a20.4 20.4 0 1 1 0-40.7 20.4 20.4 0 1 1 0 40.7M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.6-183.4a20.4 20.4 0 1 1 0 40.8 20.4 20.4 0 1 1 0-40.8"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.sections", "navigation.top", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
